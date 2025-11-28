@@ -1,0 +1,20 @@
+import TrackingView from "@/views/TrackingView.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import DashboardView from "@/views/DashboardView.vue";
+import LoginView from "@/views/LoginView.vue";
+import StockView from "@/views/StockView.vue";
+
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: "/", redirect: "/login" },
+    { path: "/login", component: LoginView },
+    { path: "/dashboard", component: DashboardView },
+    { path: "/stock", component: StockView },
+    { path: "/tracking", component: TrackingView },
+  ],
+});
+
+export default router;
+
